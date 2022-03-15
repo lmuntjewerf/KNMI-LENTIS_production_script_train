@@ -1,0 +1,136 @@
+[profile.ecmwf-INIT] session is -bash on ccappn026 at Tue 20220222_094331 = 1645523011
+
+[profile.ecmwf-INFO] HOME=/home/ms/nl/nklm=/home/ms/nl/nklm
+
+[profile.ecmwf-INFO] PERM=/perm/ms/nl/nklm=/perm/ms/nl/nklm
+
+[profile.ecmwf-INFO] SCRATCH=TEMP=/scratch/ms/nl/nklm=/lus/snx11062/scratch/ms/nl/nklm
+
+[profile.ecmwf-INFO] SCRATCHDIR=TMPDIR=/lus/snx11062/TMP/JTMP/88/nklm.3094947.ccapar.20220222T094321
+
+## INFO -------------------------------------------------------------------------------------
+## INFO  This is the ECMWF jobfilter
+## INFO  +++ Please report issues to calldesk, cdk@ecmwf.int +++
+## INFO  /usr/local/apps/pbs_tools/bin/ecqsub: size: 114113, mtime: Mon Sep 13 16:43:35 2021
+## INFO -------------------------------------------------------------------------------------
+## INFO Time at submit: Tue Feb 22 09:43:21 2022 (1645523001.5) on cca-login4:/home/ms/nl/nklm/ecearth3_scripts/preprocessing
+## INFO invoked at 2022-02-22 09:43:21.496242 as: '/opt/pbs/13.0.403.161593/bin/qsub' 'submit.pbs'
+## INFO IN: #PBS -l EC_job_name=preproc
+## INFO IN: #PBS -l EC_billing_account=nlmonkli
+## INFO IN: #PBS -l walltime=01:00:00
+## INFO Billing account = nlmonkli
+## INFO history jobtag identifier = nklm-submit.pbs-/home/ms/nl/nklm/ecearth3_scripts/preprocessing/submit.pbs
+## INFO Calculated select = 1:vntype=cray_postproc:EC_accept_from_queue=ns:ncpus=1:mem=1024MB
+## INFO Nodes needed: 1
+## INFO Setting directive #PBS -l EC_nodes=1
+## INFO Setting directive #PBS -l select=1:vntype=cray_postproc:EC_accept_from_queue=ns:ncpus=1:mem=1024MB
+## INFO Setting directive #PBS -l EC_max_threads_per_node=1
+## INFO Setting directive #PBS -l EC_ppn_cpus=1
+## INFO Setting directive #PBS -l EC_job_name=preproc
+## INFO Setting directive #PBS -l EC_job_tmpdir=DEFAULT
+## INFO Setting directive #PBS -l EC_threads_per_numa_node=1
+## INFO Setting directive #PBS -l EC_threads_per_task=1
+## INFO Setting directive #PBS -l EC_resources=generic:snx11062
+## INFO Setting directive #PBS -l EC_tasks_per_node=1
+## INFO Setting directive #PBS -l EC_tmpdir_mem=0
+## INFO Setting directive #PBS -l EC_total_tasks=1
+## INFO Setting directive #PBS -l EC_hyperthreads=2
+## INFO Setting directive #PBS -l EC_billing_account=nlmonkli
+## INFO OUT: #PBS -l EC_predicted_walltime=0
+## INFO OUT: #PBS -l EC_nodes=1
+## INFO OUT: #PBS -l select=1:vntype=cray_postproc:EC_accept_from_queue=ns:ncpus=1:mem=1024MB
+## INFO OUT: #PBS -l EC_max_threads_per_node=1
+## INFO OUT: #PBS -l EC_ppn_cpus=1
+## INFO OUT: #PBS -l EC_job_name=preproc
+## INFO OUT: #PBS -l EC_job_tmpdir=DEFAULT
+## INFO OUT: #PBS -l EC_threads_per_numa_node=1
+## INFO OUT: #PBS -W umask=027
+## INFO OUT: #PBS -l EC_threads_per_task=1
+## INFO OUT: #PBS -l EC_resources=generic:snx11062
+## INFO OUT: #PBS -N submit.pbs
+## INFO OUT: #PBS -l EC_tasks_per_node=1
+## INFO OUT: #PBS -l EC_tmpdir_mem=0
+## INFO OUT: #PBS -l EC_total_tasks=1
+## INFO OUT: #PBS -l EC_hyperthreads=2
+## INFO OUT: #PBS -l EC_billing_account=nlmonkli
+## INFO OUT: #PBS -l walltime=01:00:00
+## INFO  
+## INFO submit wrapper 1631551415.42 on cca-login4 took: 0.160533s pbs_took for 3094947.ccapar: 0.051638s
+-------------------
+Updated module list
+-------------------
+-------------------
+Initializing random number generator with seed 1 ...
+Perturbing fields...
+Initializing random number generator with seed 2 ...
+Perturbing fields...
+Initializing random number generator with seed 3 ...
+Perturbing fields...
+Initializing random number generator with seed 4 ...
+Perturbing fields...
+Initializing random number generator with seed 5 ...
+Perturbing fields...
+Initializing random number generator with seed 6 ...
+Perturbing fields...
+Initializing random number generator with seed 7 ...
+Perturbing fields...
+Initializing random number generator with seed 8 ...
+Perturbing fields...
+Initializing random number generator with seed 9 ...
+Perturbing fields...
+Initializing random number generator with seed 1 ...
+Perturbing fields...
+Initializing random number generator with seed 2 ...
+Perturbing fields...
+Initializing random number generator with seed 3 ...
+Perturbing fields...
+Initializing random number generator with seed 4 ...
+Perturbing fields...
+Initializing random number generator with seed 5 ...
+Perturbing fields...
+Initializing random number generator with seed 6 ...
+Perturbing fields...
+Initializing random number generator with seed 7 ...
+Perturbing fields...
+Initializing random number generator with seed 8 ...
+Perturbing fields...
+Initializing random number generator with seed 9 ...
+Perturbing fields...
+
+
+[sh.epilog.ecmwf-INFO] resources consumed by this shell:
+
+0m0.068s 0m0.032s
+0m9.081s 0m4.116s
+## INFO 3094947.ccapar: Removing prologue-created EC_ORIG_SCRATCHDIR /lus/snx11062/TMP/JTMP/88/nklm.3094947.ccapar.20220222T094321 on ccappn026 at 20220222T094635
+## INFO ----------------------------------------------------------------------------------
+## INFO  This is the ECMWF job Epilogue. Please report problems to Service Desk, servicedesk@ecmwf.int
+## INFO ----------------------------------------------------------------------------------
+## INFO  
+## INFO Run at Tue Feb 22 09:46:35 2022 on CCA
+## INFO Job Name                  : submit.pbs
+## INFO Job ID                    : 3094947.ccapar
+## INFO Queued                    : Tue Feb 22 09:43:21 2022
+## INFO Dispatched                : Tue Feb 22 09:43:31 2022
+## INFO Completed                 : Tue Feb 22 09:46:35 2022
+## INFO Waiting in the queue      : 10 seconds
+## INFO Runtime                   : 184 seconds
+## INFO Exit Code                 : 0
+## INFO Account                   : nlmonkli
+## INFO Queue                     : ns
+## INFO Owner                     : nklm
+## INFO STDOUT                    : /home/ms/nl/nklm/ecearth3_scripts/preprocessing/submit.pbs.o3094947
+## INFO STDERR                    : /home/ms/nl/nklm/ecearth3_scripts/preprocessing/submit.pbs.e3094947
+## INFO Hyperthreads              : 2
+## INFO SBU                       : 0.412205 units
+## INFO Logical CPUs              : 1
+## INFO Historic runtime average            : 184.00 seconds
+## INFO Historic runtime standard deviation : 0.00 seconds
+## INFO  
+## INFO   MOM RESOURCES USED | ncpus      cput       runtime    vmem       mem       
+## INFO ----------------------------------------------------------------------------
+## INFO   22.02.2022 - 09:46 | 1          13         184        141624kb   45816kb   
+## INFO  
+## INFO Note: Historic runtime average is 184 seconds with a standard deviation of 0.0 seconds
+## INFO This runtime falls within 1 standard deviation of average
+## INFO  

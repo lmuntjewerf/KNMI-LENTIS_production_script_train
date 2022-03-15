@@ -1,0 +1,42 @@
+load subversion 1.13.0 (PATH, MANPATH)
+load git 2.30.1 (PATH, MANPATH)
+load openssl 1.1.1f (OPENSSL_DIR, PATH, OPENSSL_INCLUDE, OPENSSL_LIB)
+load cdo 1.9.10-01 (PATH, CDO_DIR, CDO)
+load ncview 2.1.2 (PATH, NCVIEW_DIR)
+Currently Loaded Modulefiles:
+  1) modules/3.2.10.5(default)
+  2) nodestat/2.2-1.0502.60539.1.31.ari
+  3) sdb/1.1-1.0502.63652.4.25.ari
+  4) alps/5.2.5-2.0502.9955.44.1.ari
+  5) lustre-cray_ari_s/2.5_3.0.101_0.46.1_1.0502.8871.45.1-1.0502.21728.75.4
+  6) udreg/2.3.2-1.0502.10518.2.17.ari
+  7) ugni/6.0-1.0502.10863.8.29.ari
+  8) gni-headers/4.0-1.0502.10859.9.28.ari
+  9) dmapp/7.0.1-1.0502.11080.8.76.ari
+ 10) xpmem/0.1-2.0502.64982.7.29.ari
+ 11) hss-llm/7.2.0
+ 12) Base-opts/1.0.2-1.0502.60680.2.4.ari
+ 13) cce/8.5.8(default)
+ 14) craype-broadwell
+ 15) craype-network-aries
+ 16) craype/2.5.9(default)
+ 17) cray-libsci/16.11.1(default)
+ 18) pmi/5.0.11(default)
+ 19) rca/1.0.0-2.0502.60530.1.62.ari
+ 20) atp/2.1.0(default)
+ 21) PrgEnv-cray/5.2.82
+ 22) pbs/13.0.412.192482
+ 23) cray-mpich/7.5.3(default)
+ 24) cdt/17.03
+ 25) verbose/false
+ 26) ecfs/2.2.20(new:test:prodn:default)
+ 27) jasper/1.900.1(default)
+ 28) eccodes/2.23.0(oct21:default)
+ 29) sms/4.4.13(default)
+ 30) batch_utils/1.6(default)
+ 31) verbose/true(default)
+ 32) subversion/1.13.0(new:default)
+ 33) git/2.30.1(may21:new:default)
+ 34) openssl/1.1.1f(may21:jun20:new:default)
+ 35) cdo/1.9.10-01(new:oct21:default)
+ 36) ncview/2.1.2(default)

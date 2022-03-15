@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# PBS batch script 
+#
+#PBS -l EC_job_name=preproc
+#PBS -l EC_billing_account=nlmonkli
+#PBS -l walltime=01:00:00
+#	#PBS -q regular
+#       #PBS -q share
+#	#PBS -l select=1:ncpus=1
+
+cd $HOME/ecearth3_scripts/preprocessing
+
+#./test.sh
+./run_perturb_all.sh
