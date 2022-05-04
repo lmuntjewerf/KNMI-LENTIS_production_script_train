@@ -21,9 +21,6 @@ set -ex
 
 
 # -------- SWITCHES
-#ecedir='/perm/ms/nl/nm6/primavera/sources' 
-#ecedir='/perm/ms/nl/nm6/trunk/sources' 
-#ecedir='/scratch/ms/nl/nm6/3.3-AerChem/sources' 
 #ecedir='/perm/ms/nl/nklm/ECEarth_bis/sources'
 #ecedir='/perm/ms/nl/nklm/ecearth3.3.2/sources'
 #ecedir='/perm/ms/nl/nklm/trunk/sources'
