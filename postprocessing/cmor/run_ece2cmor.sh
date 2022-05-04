@@ -1,6 +1,8 @@
 #! /usr/bin/env bash
 
-set -ex
+# written by Laura Muntjewerf
+
+#set -ex
 
 # activatie python packages
 eval activatemamba

@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Thomas Reerink
+# orig by Thomas Reerink
+# adapted by Laura Muntjewerf
 #
 # Run this script without arguments for examples how to call this script.
 #
