@@ -13,17 +13,17 @@ set -ex
 
 
 
-scenario=historical
-for j in {01..16}; do
-  #ls $SCRATCH/from_Thomas/dutch-scenarios/"$scenario"/"$scenario"-$(printf "%02d" $j)
-  tarfile=$SCRATCH/from_Thomas/dutch-scenarios/"$scenario"/"$scenario"-"$(printf "%02d" $j)"/20000101.tar.gz
-  dest=$SCRATCH/from_Thomas/dutch-scenarios/"$scenario"/"$scenario"-"$(printf "%02d" $j)"/20000101
-  mkdir -p $dest
-  tar -xvzf $tarfile -C $dest/.
-done
+#scenario=historical
+#for j in {01..16}; do
+#  #ls $SCRATCH/from_Thomas/dutch-scenarios/"$scenario"/"$scenario"-$(printf "%02d" $j)
+#  tarfile=$SCRATCH/from_Thomas/dutch-scenarios/"$scenario"/"$scenario"-"$(printf "%02d" $j)"/20000101.tar.gz
+#  dest=$SCRATCH/from_Thomas/dutch-scenarios/"$scenario"/"$scenario"-"$(printf "%02d" $j)"/20000101
+#  mkdir -p $dest
+#  tar -xvzf $tarfile -C $dest/.
+#done
 
 scenario=ssp2-4.5
-for j in {01..14}; do
+for j in {15..16}; do
   #ls $SCRATCH/from_Thomas/dutch-scenarios/"$scenario"/"$scenario"-$(printf "%02d" $j)
   tarfile=$SCRATCH/from_Thomas/dutch-scenarios/"$scenario"/"$scenario"-"$(printf "%02d" $j)"/20750101.tar.gz
   dest=$SCRATCH/from_Thomas/dutch-scenarios/"$scenario"/"$scenario"-"$(printf "%02d" $j)"/20750101

@@ -4,6 +4,7 @@ set -ex
 
 #-------------------
 # rename and symlink the ifs restart files
+# run this script first, then run 02_rm_redundant_IFS_SH_symlinks.sh to correct the ICMSHh011INIT symlink  to the right perturbed initial condition seed
 #-------------------
 
 # make it for the historical set

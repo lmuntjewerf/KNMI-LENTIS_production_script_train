@@ -24,7 +24,7 @@ for scenario in ${scenarios[@]}; do
       seed=$(printf "%01d" $ic_seed)
       for i in ${ic_folder}${scenario}${member}${seed}/${model}; do 
         #echo $i
-        rm -rf $i 
+        #rm -rf $i 
       done
     done
   done
