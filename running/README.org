@@ -1,3 +1,0 @@
-README
-old --> old stuff
-varex --> symlink to compiled model - control branch
