@@ -3,26 +3,21 @@
 #-------------------
 # ECtrans unattended file transfer to a member state server
 #  https://confluence.ecmwf.int/display/ECAC/Unattended+file+transfer+-+ectrans 
+#
+# download all 160 members 
 #-------------------
 
-file=ec:/nklm/LENTIS/ec-earth/validation/h011/file-overview--h011.txt
+scenario=h
+freq=day
+var=tasmax
 
-ectrans -gateway muntjewe@pc200021:/usr/people/muntjewe/ \
-          -remote muntjewe@pc200021 \
-          -source ${file} \
-          -verbose
-#verbose: gateway=ecaccess.knmi.nl
-#verbose: echost=cca.ecmwf.int
-#verbose: action=spool
-#verbose: ecuser=uid
-#verbose: source=fff
-#verbose: target=fff
-#verbose: keep=false
-#verbose: remove=false
-#verbose: option=reject
-#verbose: lifetime=1w
-#verbose: delay=(none)
-#verbose: at=(now)
-#verbose: format=yyyyMMddHHmmss
-#verbose: retryCnt=144
-#verbose: retryFrq=10m
+for i in {1..16}; do 
+  for j in {0..9}; do 
+    ectrans -gateway ecaccess.knmi.nl -remote LENTIS@genericSftp -source /scratch/ms/nl/nklm/${scenario}"$(printf "%02d" $i)"${j}_${freq}_${var}.tar.gz ; 
+  done; 
+done
+
+
+
+
+
