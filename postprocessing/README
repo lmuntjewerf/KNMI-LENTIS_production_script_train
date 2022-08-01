@@ -1,0 +1,12 @@
+README
+
+
+3postprocdir=/home/ms/nl/nklm/from/Philippe/ece3-postproc/
+Is tailered to the VAREX LE setup (i.e., not searching in $SCRATCH/ECEARTH-RUNS)
+
+Steps: 
+- 1) first run the hs 
+- 2) then run the AMWG/ECmean/timeseries
+
+
+

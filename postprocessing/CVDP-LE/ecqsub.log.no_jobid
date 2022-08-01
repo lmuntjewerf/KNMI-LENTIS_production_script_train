@@ -1,0 +1,18 @@
+## INFO -------------------------------------------------------------------------------------
+## INFO  This is the ECMWF jobfilter
+## INFO  +++ Please report issues to calldesk, cdk@ecmwf.int +++
+## INFO  /usr/local/apps/pbs_tools/bin/ecqsub: size: 114113, mtime: Mon Sep 13 16:43:35 2021
+## INFO -------------------------------------------------------------------------------------
+## INFO Time at submit: Wed Jun 15 14:42:19 2022 (1655304139.71) on cca-login4:/home/ms/nl/nklm/VAREX-LE_script_train/postprocessing/CVDP-LE/CVDP-LE
+## INFO invoked at 2022-06-15 14:42:19.712067 as: '/opt/pbs/13.0.403.161593/bin/qsub' 'submit_CVDP.pbs'
+## ERROR Reject: 
+  File "/opt/pbs/13.0.403.161593/bin/qsub", line 2626, in <module>
+    RC = main()
+  File "/opt/pbs/13.0.403.161593/bin/qsub", line 1972, in main
+    reject("script file: %s" % (str(e)))
+  File "/opt/pbs/13.0.403.161593/bin/qsub", line 403, in reject
+    msg = '\n' + ''.join(traceback.format_stack()) + '\n' + msg
+
+script file: [Errno 2] No such file or directory: 'submit_CVDP.pbs'
+## INFO  
+## INFO submit wrapper 1631551415.42 on cca-login4 took: 0.011949s pbs_took for no_jobid: -42.000000s

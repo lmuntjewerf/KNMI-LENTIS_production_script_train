@@ -27,6 +27,9 @@ if [ "$#" -eq 3 ]; then
 
  wall_clock_time=2:00:00    # Maximum estimated time of run, e.g: 6:01:00  means 6 ours, 1 minute, zero seconds
  cores_per_node=18          # The number of cores used per node, recommended at cca is to use one thread, i.e 18 cores per node
+#PBS -l EC_memory_per_task=100mb
+ EC_memory_per_task=60GB
+
 
  COMPONENT=$1
  LEG=$2
@@ -37,23 +40,29 @@ if [ "$#" -eq 3 ]; then
  
   if [[ ${EXP:0:1} == 'h'  ]] ; then
    outputcontrolfiles='varex-control-CMIP-historical'
+   cmip_period='CMIP-historical'
  elif [[ ${EXP:0:1} == 's'  ]] ; then
    outputcontrolfiles='varex-control-ScenarioMIP-ssp245'
+   cmip_period='ScenarioMIP-ssp245'
  elif [[ ${EXP:0:1} == 'i'  ]] ; then
    outputcontrolfiles='varex-perturbed-soil-moisture-CMIP-historical'
+   cmip_period='CMIP-historical'
  elif [[ ${EXP:0:1} == 't'  ]] ; then
    outputcontrolfiles='varex-perturbed-soil-moisture-ScenarioMIP-ssp2455'
+   cmip_period='ScenarioMIP-ssp245'
  elif [[ ${EXP:0:1} == 'j'  ]] ; then
    outputcontrolfiles='varex-perturbed-convection-CMIP-historical'
+   cmip_period='CMIP-historical'
  elif [[ ${EXP:0:1} == 'u'  ]] ; then
    outputcontrolfiles='varex-perturbed-convection-ScenarioMIP-ssp245'
+   cmip_period='ScenarioMIP-ssp245'
  else 
    echo 'exiting, incorrect exp_name'; 
    exit
  fi
  
  VARLIST=${SCRATCH}/submit-ec-earth-3/branch-varex-${EXP}/ctrl/output-control-files/${outputcontrolfiles}/varex-data-request-varlist-EC-Earth3.json
- METADATA=${SCRATCH}/submit-ec-earth-3/branch-varex-${EXP}/ctrl/output-control-files/${outputcontrolfiles}/metadata-cmip6-CMIP-historical-EC-EARTH-AOGCM-${COMPONENT}-template.json
+ METADATA=${SCRATCH}/submit-ec-earth-3/branch-varex-${EXP}/ctrl/output-control-files/${outputcontrolfiles}/metadata-cmip6-${cmip_period}-EC-EARTH-AOGCM-${COMPONENT}-template.json
 
 
  TEMPDIR=${SCRATCH}/cmorisation/temp-cmor-dir/$EXP/$COMPONENT/$LEG
@@ -78,6 +87,7 @@ if [ "$#" -eq 3 ]; then
 #PBS -l EC_hyperthreads=1
 #PBS -l EC_total_tasks=1
 #PBS -l EC_threads_per_task='${cores_per_node}'
+#PBS -l EC_memory_per_task='${EC_memory_per_task}'
 ##PBS -l EC_billing_account=${EC_billing_account}
 ##PBS -W depend=afterok:<JOB_ID_OF_PREVIOUS_DEPENDENCY_JOB>
 '
