@@ -20,7 +20,10 @@ EXP=$2
 # no need for user edits below
 # info about where on ECFS it will go to
 scenariofolder=${EXP:0:1}'xxx/'  # n.b. this can be hxxx or sxxx
-ecfsdir='ec:/nklm/VAREX/ec-earth/cmorised_by_var/'
+ecfsdir='ec:/nklm/LENTIS/ec-earth/cmorised_by_var/'
+
+tempfolder=$SCRATCH/cmor_temp/${EXP}/
+mkdir -p ${tempfolder}
 
 # get relevant info from path string cutting with delimiter '/'
 cmordir=${SCRATCH}/cmorisation/cmorised-results
@@ -38,9 +41,9 @@ cd ${FREQUENCY}
 #for var in *[!{".tar.gz"}]; do   # this is any string followed by NOT ".tar.gz"
 for var in *; do
   echo ${var};
-  tar -czvf ${EXP}_${FREQUENCY}_${var}.tar.gz ${var}                   # tar the file
+  tar -czvf ${tempfolder}${EXP}_${FREQUENCY}_${var}.tar.gz ${var}                   # tar the file
   ecfsdir_var=${ecfsdir}${scenariofolder}${FREQUENCY}/${var}           # define the ECFS folder
-  emv -o ${EXP}_${FREQUENCY}_${var}.tar.gz ${ecfsdir_var}/             # -o: overwrite if already existing ;move (previous ecp/copy) tar file to ECFS -e if not already existing, otherwise keep old #rm -rf ${EXP}_${FREQUENCY}_${var}.tar.gz                             # remove the tar file
+  emv -o ${tempfolder}${EXP}_${FREQUENCY}_${var}.tar.gz ${ecfsdir_var}/             # -o: overwrite if already existing ;move (previous ecp/copy) tar file to ECFS -e if not already existing, otherwise keep old #rm -rf ${EXP}_${FREQUENCY}_${var}.tar.gz                             # remove the tar file
 done  ;
 
 #for var in *[!{.tar.gz}]; do   # this is any string followed by NOT ".tar.gz"
