@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# PBS batch script 
+#
+
+ACCOUNT=$EC_billing_account
+
+#PBS -l EC_job_name=preproc
+#PBS -l EC_billing_account=<ACCOUNT>
+#PBS -l walltime=01:00:00
+
+
+./run_perturb_all.sh
