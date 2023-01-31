@@ -3,6 +3,9 @@
 
 #-------------------
 # check all the nemo and ifs input files are there for the 16 historical and the 16 ssp2-4.5 members
+#
+# # Written by Laura Muntjewerf 
+#   laura.muntjewerf@gmail.com
 #-------------------
 
 # make it for the historical set
@@ -15,13 +18,13 @@ for scenario in ${scenarios[@]}; do
     scenario_short=ha
     scenario_full=historical
     date=20000101
-    Thomas_folder=scratch/ms/nl/nklm/from_Thomas/dutch-scenarios/"$scenario_full"/"$scenario_full"-"$member"/"$date"/lustre2/projects/dutch_scen/reerink/ec-earth-3/branch-knmi23-dutch-climate-scenarios/"$scenario_short""$member"/save_ic/"$date"
+    folder=$SCRATCH/"$scenario_full"/"$scenario_full"-"$member"/"$date"/"$scenario_short""$member"/save_ic/"$date"
 
-    cd /"$Thomas_folder"/nemo/
+    cd /"$folder"/nemo/
     echo 'nemo '"$scenario_short""$member"
     ls -l  | wc -l 
 
-    cd /"$Thomas_folder"/ifs/
+    cd /"$folder"/ifs/
     echo 'ifs '"$scenario_short""$member"
     ls -l  | wc -l 
 
@@ -38,13 +41,13 @@ for scenario in ${scenarios[@]}; do
     scenario_short=s2
     scenario_full=ssp2-4.5
     date=20750101
-    Thomas_folder=scratch/ms/nl/nklm/from_Thomas/dutch-scenarios/"$scenario_full"/"$scenario_full"-"$member"/"$date"/lustre2/projects/dutch_scen/reerink/ec-earth-3/branch-knmi23-dutch-climate-scenarios/"$scenario_short""$member"/save_ic/"$date"
+    folder=$SCRATCH/"$scenario_full"/"$scenario_full"-"$member"/"$date"/"$scenario_short""$member"/save_ic/"$date"
 
-    cd /"$Thomas_folder"/nemo/
+    cd /"$folder"/nemo/
     echo "$scenario_short""$member"
     ls -l | wc -l 
 
-    cd /"$Thomas_folder"/ifs/
+    cd /"$folder"/ifs/
     echo 'ifs '"$scenario_short""$member"
     ls -l  | wc -l
 

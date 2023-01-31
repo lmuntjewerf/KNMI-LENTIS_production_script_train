@@ -6,6 +6,9 @@ set -ex
 # correct the ICMSHh011INIT symlink to the right perturbed initial condition seed
 # remove all other redundant ICMSHh011INITr* symlinks of the other perturbed initial conditions
 # run this script after 01_symlink_all_IFS_icfiles.sh 
+#
+# # Written by Laura Muntjewerf 
+#   laura.muntjewerf@gmail.com
 #-------------------
 
 # choose ifs or nemo 
@@ -17,7 +20,7 @@ model=ifs
 
 #---- no user edits below ----
 scenarios=(s)
-ic_folder=/scratch/ms/nl/nklm/MSO_VAREX/sets_ic_files/
+ic_folder=$SCRATCH/sets_ic_files/
 for scenario in ${scenarios[@]}; do
   for ic_member in {01..16}; do
     member=$(printf "%02d" $ic_member)

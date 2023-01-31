@@ -27,7 +27,7 @@ for j in {01..16}; do
 done
 
 scenario=ssp2-4.5
-for j in {15..16}; do
+for j in {1..16}; do
   tarfile=$SCRATCH/"$scenario"/"$scenario"-"$(printf "%02d" $j)"/20750101.tar.gz
   dest=$SCRATCH/"$scenario"/"$scenario"-"$(printf "%02d" $j)"/20750101
   mkdir -p $dest

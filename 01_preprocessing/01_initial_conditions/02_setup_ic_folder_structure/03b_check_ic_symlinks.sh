@@ -2,7 +2,7 @@
 
 
 
-sets_ic_files=/scratch/ms/nl/nklm/MSO_VAREX/sets_ic_files/
+sets_ic_files=$SCRATCH/sets_ic_files/
 
 cd $sets_ic_files
 

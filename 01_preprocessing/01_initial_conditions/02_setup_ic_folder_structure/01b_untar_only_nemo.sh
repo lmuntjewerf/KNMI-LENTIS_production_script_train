@@ -3,7 +3,8 @@
 set -ex
 
 #-------------------
-# Untar only nemo files (user needs to specify the location of the folder)
+# Untar only nemo files 
+# User needs to specify the location of the GO TO folder. 
 # Because the way it was saved, it is necessary do to some stripping of the folder structure
 #
 # # Written by Laura Muntjewerf 
