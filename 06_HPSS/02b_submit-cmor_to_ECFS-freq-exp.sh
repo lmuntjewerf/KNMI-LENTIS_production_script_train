@@ -5,7 +5,7 @@
 # 
 # submit script to bring tar.gz files of cmorized output to ECFS
 # following the ec-folder structer as created by:
-#     /home/ms/nl/nklm/VAREX-LE_script_train/HPSS/ltape/make_ec_folders.sh
+#     $HOME/VAREX-LE_script_train/HPSS/make_ec_folders.sh
 #
 # This scripts requires two arguments:
 #  1st argument: frequency of the cmor output
@@ -18,10 +18,10 @@ if [ "$#" -eq 2 ]; then
   FREQUENCY=$1
   EXP=$2 
   
-  SCRIPT_LOCATION=/home/ms/nl/nklm/VAREX-LE_script_train/HPSS/ltape/cmor_by_freq_to_ECFS.sh
+  SCRIPT_LOCATION=$HOME/VAREX-LE_script_train/HPSS/cmor_by_freq_to_ECFS.sh
 
   # The directoy from where the submit scripts will be launched by qsub:
-  running_directory=/home/ms/nl/nklm/VAREX-LE_script_train/HPSS/ltape/jobs_cmor_by_freq_to_ECFS/
+  running_directory=$HOME/VAREX-LE_script_train/HPSS/jobs_cmor_by_freq_to_ECFS/
   
   pbs_header='
 #PBS -N cmor_totape-'${FREQUENCY}'-'${EXP}'

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-scenariofolder='hxxx/'
+scenariofolder='hxxx/' #'sxxx/'
 ecfsdir='ec:/nklm/LENTIS/ec-earth/cmorised_by_var/'
 
 dir=$SCRATCH/cmorisation/cmorised-results/cmor-VAREX-cmip-s016/s016/CMIP6/ScenarioMIP/KNMI/EC-Earth3/ssp245/r5016i6p5f1/

@@ -38,15 +38,13 @@ cmorpath=${cmordir}/cmor-VAREX-cmip-${EXP}/${EXP}/CMIP6/${rperiod}/KNMI/EC-Earth
 cd ${cmorpath}
 
 cd ${FREQUENCY}
-#for var in *[!{".tar.gz"}]; do   # this is any string followed by NOT ".tar.gz"
 for var in *; do
   echo ${var};
   tar -czvf ${tempfolder}${EXP}_${FREQUENCY}_${var}.tar.gz ${var}                   # tar the file
-  ecfsdir_var=${ecfsdir}${scenariofolder}${FREQUENCY}/${var}           # define the ECFS folder
+  ecfsdir_var=${ecfsdir}${scenariofolder}${FREQUENCY}/${var}                        # define the ECFS folder
   emv -o ${tempfolder}${EXP}_${FREQUENCY}_${var}.tar.gz ${ecfsdir_var}/             # -o: overwrite if already existing ;move (previous ecp/copy) tar file to ECFS -e if not already existing, otherwise keep old #rm -rf ${EXP}_${FREQUENCY}_${var}.tar.gz                             # remove the tar file
 done  ;
 
-#for var in *[!{.tar.gz}]; do   # this is any string followed by NOT ".tar.gz"
 #for var in *[!.]*; do
 #  echo ${var};
 #  rm -rf ${EXP}_${FREQUENCY}_${var}.tar.gz                             # remove the tar file
