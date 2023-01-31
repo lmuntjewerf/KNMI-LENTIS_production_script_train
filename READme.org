@@ -1,4 +1,0 @@
-* VAREX-LE production tools
-** PURPOSE
-	stuff
-        more stuff
