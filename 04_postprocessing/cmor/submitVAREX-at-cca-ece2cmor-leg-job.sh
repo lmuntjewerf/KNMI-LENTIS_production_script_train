@@ -141,8 +141,6 @@ if [ "$#" -eq 3 ]; then
 if [ -d ${PERM}/cmorize/ece2cmor3/ ]; then
  ece2cmor_version_log='
  cd ${PERM}/cmorize/ece2cmor3/; echo; git log |head -n 1 | sed -e "s/^/Using /" -e "s/$/ for/"; ece2cmor --version;                                           cd '${running_directory}';
-#cd ${PERM}/cmorize/ece2cmor3/; echo; git log |head -n 1 | sed -e "s/^/Using /" -e "s/$/ for/"; ece2cmor --version; git status --untracked-files=no           cd '${running_directory}';
-#cd ${PERM}/cmorize/ece2cmor3/; echo; git log |head -n 1 | sed -e "s/^/Using /" -e "s/$/ for/"; ece2cmor --version; git status --untracked-files=no; git diff cd '${running_directory}';
  '
 else
  ece2cmor_version_log='
@@ -204,10 +202,7 @@ fi
  echo '  qstat -u ' ${USER}
  echo '  cd '${running_directory}
  echo
- #qstat -u ${USER} | grep -v -e 'ccapar:' -e '-----' -e '^$'
- #echo
- #echo "qstat -u  ${USER} |grep ${USER} |sed -e 's/^/qdel /' -e 's/.'${USER}'.*//'"  # Cancelling jobs
- #echo
+
 
 
  else

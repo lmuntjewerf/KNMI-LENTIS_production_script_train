@@ -13,7 +13,7 @@
 ##PBS -W depend=afterok:<JOB_ID_OF_PREVIOUS_DEPENDENCY_JOB>
 
 
- source /scratch/ms/nl/nklm/mamba/etc/profile.d/conda.sh
+ source $SCRATCH/mamba/etc/profile.d/conda.sh
  conda activate ece2cmor3
  export HDF5_USE_FILE_LOCKING=FALSE
  export UVCDAT_ANONYMOUS_LOG=false
@@ -21,21 +21,20 @@
  if ! type ece2cmor > /dev/null; then echo -e "\e[1;31m Error:\e[0m"" ece2cmor is not activated." ;fi
 
 
- cd ${PERM}/cmorize/ece2cmor3/; echo; git log |head -n 1 | sed -e "s/^/Using /" -e "s/$/ for/"; ece2cmor --version;                                           cd /scratch/ms/nl/nklm/cmorisation/;
-#cd ${PERM}/cmorize/ece2cmor3/; echo; git log |head -n 1 | sed -e "s/^/Using /" -e "s/$/ for/"; ece2cmor --version; git status --untracked-files=no           cd /scratch/ms/nl/nklm/cmorisation/;
-#cd ${PERM}/cmorize/ece2cmor3/; echo; git log |head -n 1 | sed -e "s/^/Using /" -e "s/$/ for/"; ece2cmor --version; git status --untracked-files=no; git diff cd /scratch/ms/nl/nklm/cmorisation/;
+ cd ${PERM}/cmorize/ece2cmor3/; echo; git log |head -n 1 | sed -e "s/^/Using /" -e "s/$/ for/"; ece2cmor --version;                                           cd $SCRATCH/cmorisation/;
+
 
 
  COMPONENT=ifs
  LEG=001
 
  EXP=s110
- ECEDIR=/scratch/ms/nl/nklm/ec-earth-3/branch-varex/s110/output/ifs/001
+ ECEDIR=$SCRATCH/ec-earth-3/branch-varex/s110/output/ifs/001
  ECEMODEL=EC-EARTH-AOGCM
- METADATA=/scratch/ms/nl/nklm/submit-ec-earth-3/branch-varex-s110/ctrl/output-control-files/varex-control-ScenarioMIP-ssp245/metadata-cmip6-CMIP-historical-EC-EARTH-AOGCM-ifs-template.json
- TEMPDIR=/scratch/ms/nl/nklm/cmorisation/temp-cmor-dir/s110/ifs/001
- VARLIST=/scratch/ms/nl/nklm/submit-ec-earth-3/branch-varex-s110/ctrl/output-control-files/varex-control-ScenarioMIP-ssp245/varex-data-request-varlist-EC-Earth3.json
- ODIR=/scratch/ms/nl/nklm/cmorisation/cmorised-results/cmor-VAREX-cmip-s110/s110
+ METADATA=$SCRATCH/submit-ec-earth-3/branch-varex-s110/ctrl/output-control-files/varex-control-ScenarioMIP-ssp245/metadata-cmip6-CMIP-historical-EC-EARTH-AOGCM-ifs-template.json
+ TEMPDIR=$SCRATCH/cmorisation/temp-cmor-dir/s110/ifs/001
+ VARLIST=$SCRATCH/submit-ec-earth-3/branch-varex-s110/ctrl/output-control-files/varex-control-ScenarioMIP-ssp245/varex-data-request-varlist-EC-Earth3.json
+ ODIR=$SCRATCH/cmorisation/cmorised-results/cmor-VAREX-cmip-s110/s110
 
 
  if [ ! -d "$ECEDIR"       ]; then echo -e "\e[1;31m Error:\e[0m"" EC-Earth3 data output directory: " $ECEDIR " does not exist. Aborting job: " $0 >&2; exit 1; fi
@@ -70,7 +69,6 @@
  mv -f $EXP-$COMPONENT-$LEG-*.log $ODIR/logs/
 
 
-#if [ -d $TEMPDIR ]; then rm -rf $TEMPDIR; fi
 
  echo
  echo 'The cmorise-s110-ifs-001.sh job has finished.'
