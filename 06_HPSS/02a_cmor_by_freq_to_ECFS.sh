@@ -8,6 +8,8 @@ set -ex
 # Arguments: 
 #    $1 is FREQUENCY (3hr, Amon etc)
 #    $2 is EXP (h011 etc)
+#
+# Laura Muntjewerf
 # ==================
 
 

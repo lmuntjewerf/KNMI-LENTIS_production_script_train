@@ -23,7 +23,7 @@
   output_file=validate-varex-simulation-${k}${j}${i}_1.sh
   output_file2=validate-varex-simulation-${k}${j}${i}_2.sh
   version=v20220601
-  account='--account=proj-dutch_post'
+  account=''
   qos=''
 
 

@@ -7,6 +7,8 @@
 # download all 160 members in this case of: PD (h) tas daily
 #
 # user needs to provide the member gateway and remote_name
+#
+# # Laura Muntjewerf
 #-------------------
 
 scenario=h

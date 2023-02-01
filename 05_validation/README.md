@@ -14,14 +14,14 @@ Using the validation tool takes 3 steps:
 This is the main body of work. It checks whether all legs of the cmorization are done and counts a number of files.
 Also it submits the checksum and nctime jobs.
 It is handy to start this in a screen session (screen -S) because it takes a while)
-3) after the jobs have finished, you can execute validation script #2 (example provided in this folder is `validate-varex-simulation-h100_2.sh)`. This does checks and return error messages if something is missing. 
+3) after the jobs have finished, you can execute validation script #2 (example provided in this folder is `validate-varex-simulation-h100_2.sh`). This does checks and return error messages if something is missing. 
 This takes very short, best done on the commad line. 
 
 ### Checks and Output
 1) validation script #1 
 The output should look like: 
 
-``````
+```
 10
 10
 18
