@@ -12,10 +12,10 @@ eval which mamba
 eval activateece2cmor3
 
 # cd to place of execution
-#cd ${PERM}/cmorize/ece2cmor3/ece2cmor3/scripts/submit-script-examples/
-cd /home/ms/nl/nklm/VAREX-LE_script_train/postprocessing/cmor
+cd ${HOME}/04_postprocessing/cmor
 
 declare -a experiments
+experiments=(s032)
 #experiments=(h150 h151 h152 h153 h154 h160 h161 h162 h163 h164 s032 s154 s160 s161 s162 s163 s164)
 #experiments=(s032 s084 s130 s131 s132 s133 s134 s140 s141 s142 s143 s144 s150 s151 s152 s153)
 #experiments=(h130 h131 h132 h133 h134 h140 h141 h142 h143 h144 s123 s124)
@@ -27,8 +27,6 @@ declare -a experiments
 #experiments=(s050 s051 s052 s053 s054 s060 s061 s062 s063 s064 s070 s071 s072 s073 s074)
 #experiments=(s010 h050 h051 h052 h053 h054 h060 h061)
 #experiments=(h062 h063 h064 h070 h071 h072 h073 h074)
-experiments=(s032)
-
 #experiments=(h023 h024 h030 h031 h032 h033 h034 h040 h041 h042 h043 h044) 
 #experiments=(s010 s011 s012 s013 s014 s020 s021 s022 s023 s024 s030 s031 s032 s033 s034 s040 
 #experiments=(s041 s042 s043 s044)
@@ -82,9 +80,9 @@ for experiment in ${experiments[@]}; do
   for j in {001..010}; do 
     ./submitVAREX-at-cca-ece2cmor-leg-job.sh  ifs  $(printf "%03d" $j) ${experiment}; 
   done
-  #for j in {001..010}; do 
-  #  ./submitVAREX-at-cca-ece2cmor-leg-job.sh  nemo $(printf "%03d" $j) ${experiment}; 
-  #done
+  for j in {001..010}; do 
+    ./submitVAREX-at-cca-ece2cmor-leg-job.sh  nemo $(printf "%03d" $j) ${experiment}; 
+  done
 done
 
 echo "output of cmorization will be here: ${SCRATCH}/cmorisation/cmorised-results/"
