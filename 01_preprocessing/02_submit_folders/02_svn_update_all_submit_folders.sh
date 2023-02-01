@@ -21,8 +21,8 @@ elif [ "$#" -eq 2 ]; then
   submit_dir_ece=${SCRATCH}/submit-ec-earth-3/
   #for k in {h,i,j,s,u,t}; do
   for k in {s,}; do
-   for j in $(seq -f "%02g" 2 16); do # zero padding
-    for i in {0..4}; do
+   for j in $(seq -f "%02g" 1 16); do # zero padding
+    for i in {0..9}; do
      cd ${submit_dir_ece}/branch-varex-${k}${j}${i}
      #echo --username $svn_username --password $svn_password
      #svn revert .

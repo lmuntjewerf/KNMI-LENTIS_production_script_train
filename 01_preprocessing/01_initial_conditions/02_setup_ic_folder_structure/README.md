@@ -28,8 +28,8 @@ Each ensemble member has a unique set of IFS IC files.
 A part of the parent IFS IC files don't undergo micro perturbations and we need to softlink these for each parent to 10 ensemble member ic-folders. Another part of the parent IFS IC files _do_ undergo micro perturbations (in `01_generate_perturbed_ics`): these are the `ICMSHxxxx` IC files. Each ensemble member has a unique `ICMSHxxxx` IC file. 
 
 The softlinking of the parent IFS ICs is done in `02c_symlink_all_IFS_icfiles.sh`
-We need to remove the redundant unperturbed `ICMSHxxxx` IC files that got copied with this script. This is done in `02d_rm_redundant_IFS_ICMSH_symlinks.sh`. 
-**CHECK hoe dit zit!!** Next, the perturbed `ICMSHxxxx` IC files need to be softlinked in 
+Next, the perturbed `ICMSHxxxx` IC files need to be softlinked in. Also, we need to remove the redundant unperturbed `ICMSHxxxx` IC files that got copied with this script. This is done in `02d_rm_redundant_IFS_ICMSH_symlinks.sh`. 
+
 Finally, we rename some ic files in `02e_rename_some_ic_files.sh`
 
 ### 03 Checks

@@ -2,14 +2,20 @@
 
 These are the scrips used in the production of the KNMI-LENTIS (Large Ensemble Time Slice) dataset. The dataset is documented in this repository: [https://github.com/lmuntjewerf/KNMI-LENTIS_dataset_description](https://github.com/lmuntjewerf/KNMI-LENTIS_dataset_description) 
 
+The Global Climate Model that is used for generating this Large Ensemble is EC-Earth3 - VAREX project branch [https://svn.ec-earth.org/ecearth3/branches/projects/varex](https://svn.ec-earth.org/ecearth3/branches/projects/varex) (access restricted to ECMWF members). 
+
 ## Sections
 
 1. Preprocessing
+Preprocessing in preparation for running the ensemble consists of: 
+- generating initial condition files and setting up a framework to access them efficiently
+- set up a framework of submit folders for each ensemble member
 
 2. Compiling
+This folder contains the wrapper to submit the compilation job for EC-Earth3 on ECMWF's HPC cca.
 
 3. Running
-All ensemble members have an own run directory. This folder, in operational state, contained softlinks to all these submit directories and a softlink to the EC-Earth3 code base. 
+All ensemble members have an own run directory as generated in [01_preprocessing/02_submit_folders]. The running folder, in operational state, contained softlinks to all these submit directories and a softlink to the EC-Earth3 code base. 
 It further contains the wrapper template to sumbit the simulation (copy this file in the rundir/classic folder).
 
 4. Postprocessing 
